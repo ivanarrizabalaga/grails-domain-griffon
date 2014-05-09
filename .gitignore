@@ -1,0 +1,34 @@
+# .gitignore Grails
+
+# web application files
+book-svr/web-app/WEB-INF/classes
+
+# default HSQL database files for production mode
+book-svr/prodDb.*
+
+# general HSQL database files
+book-svr/*Db.properties
+book-svr/*Db.script
+
+# logs
+book-svr/stacktrace.log
+book-svr/test/reports
+book-svr/logs
+
+# project release file
+book-svr/*.war
+
+# plugin release files
+book-svr/*.zip
+book-svr/plugin.xml
+
+# older plugin install locations
+book-svr/plugins
+book-svr/web-app/plugins
+
+# "temporary" build files
+book-svr/target
+
+# .gitignore Griffon
+
+book-client/staging
