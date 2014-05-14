@@ -29,6 +29,24 @@ book-svr/web-app/plugins
 # "temporary" build files
 book-svr/target
 
+#ide files
+book-svr/.classpath
+book-svr/.project
+book-svr/.settings
+book-svr/target-eclipse
+
 # .gitignore Griffon
 
 book-client/staging
+book-client/.classpath
+book-client/.project
+book-client/.settings
+book-client/.idea
+book-client/*.iml
+book-client/USER_HOME
+book-client/out
+book-client/target
+
+
+# sublime2 project
+grails-domain-griffon.sublime-*
