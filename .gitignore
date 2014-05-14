@@ -50,3 +50,7 @@ book-client/target
 
 # sublime2 project
 grails-domain-griffon.sublime-*
+
+#common
+book-common/build
+book-common/.gradle
