@@ -163,12 +163,12 @@ griffon.project.dependency.resolution = {
         // from public Maven repositories
         mavenLocal()
         mavenCentral()
-        mavenRepo "http://snapshots.repository.codehaus.org"
-        mavenRepo "http://repository.codehaus.org"
-        mavenRepo "http://download.java.net/maven/2/"
-        mavenRepo "http://repository.jboss.com/maven2/"
-        mavenRepo "http://repo.spring.io/milestone"
-        mavenRepo "http://repo.spring.io/release"        
+//        mavenRepo "http://snapshots.repository.codehaus.org"
+//        mavenRepo "http://repository.codehaus.org"
+//        mavenRepo "http://download.java.net/maven/2/"
+//        mavenRepo "http://repository.jboss.com/maven2/"
+//        mavenRepo "http://repo.spring.io/milestone"
+//        mavenRepo "http://repo.spring.io/release"
         //jcenter()
         //bintray(username: 'foo', repository: 'bar')
         //bintray('foo/bar')
@@ -176,11 +176,14 @@ griffon.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime' or 'test' scopes eg.
 
-        // runtime 'mysql:mysql-connector-java:5.1.5'
-        runtime "org.grails:grails-datastore-gorm-hibernate4:3.0.0.RELEASE"
-        runtime "org.grails:grails-spring:2.3.6"
-        runtime "com.h2database:h2:1.3.164"        
-        compile "org.springframework:spring-expression:3.2.4.RELEASE"        
+        //GORM
+//        runtime "com.h2database:h2:1.3.164"
+        compile "com.nortia.book:book-common:1.0"
+
+
+        //DIRMI
+        compile 'dirmi:dirmi:1.1.2'     
+        compile 'org.cojen:cojen:2.2.2'        
     }
 }
 

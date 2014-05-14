@@ -17,14 +17,15 @@ import static griffon.util.GriffonApplicationUtils.isMacOSX
 import grails.orm.bootstrap.*
 import grails.persistence.*
 import org.springframework.jdbc.datasource.DriverManagerDataSource
-import org.h2.Driver
+//import org.h2.Driver
 
 SwingBuilder.lookAndFeel((isMacOSX ? 'system' : 'nimbus'), 'gtk', ['metal', [boldFonts: false]])
 
 //TODO Should be a Spring bean
-new HibernateDatastoreSpringInitializer("bookdomain").
-	configureForDataSource(new DriverManagerDataSource(
-		Driver.name, 
-		"jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE", 'sa', ''
-		)
-	)
+new HibernateDatastoreSpringInitializer("com.nortia.book")
+//new HibernateDatastoreSpringInitializer("com.nortia.book").
+//	configureForDataSource(new DriverManagerDataSource(
+//		Driver.name,
+//		"jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE", 'sa', ''
+//		)
+//	)

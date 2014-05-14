@@ -1,0 +1,43 @@
+package book.client
+
+import com.nortia.book.rmi.RemoteBookAPI
+import com.nortia.book.rmi.RemoteBookClient
+import com.nortia.book.Book
+
+class BookService {
+
+	RemoteBookClient remote
+	RemoteBookAPI remoteBookAPI
+
+    void serviceInit() {
+    	log.info"serviceInit..."
+
+		this.remote=new RemoteBookClient("localhost",1234)
+		this.remoteBookAPI=this.remote.getRemoteAPI()
+
+		log.info"serviceInit...OK"
+    }
+
+    void serviceDestroy() {
+    	log.info"serviceDestroy..."
+
+    	this.remote?.close()
+
+    	log.info"serviceDestroy...OK"
+    }
+
+	List list(){
+		return remoteBookAPI.list()
+        //return Book.list()
+	}
+	Book add(String title, String author){
+        Book b=new Book(title:title,author:author)
+		remoteBookAPI.add(b)
+        //b.save()
+        return b
+	}
+	void clearAll(){
+		remoteBookAPI.clearAll()
+        //Book.executeUpdate("delete Book")
+    }
+}

@@ -1,17 +1,20 @@
 package book.client
-import bookdomain.Book
+
+import com.nortia.book.Book
 
 class BookClientController {
     // these will be injected by Griffon
     def model
     def view
+    def bookService
 
     void mvcGroupInit(Map args) {
         loadData()
     }       
 
     void loadData(){
-        List books=Book.list()
+        //List books=Book.list()
+        List books=bookService.list()
         edt{
             model.books.addAll(books)
         }
@@ -19,8 +22,7 @@ class BookClientController {
     }
 
     def addBook= {evt=null->
-        Book b=new Book(title:view.titleField.text,author:view.authorField.text)
-        b.save()
+        Book b=bookService.add(view.titleField.text,view.authorField.text)
         edt{
             model.books.add(b)
             view.titleField.text=""
@@ -29,7 +31,7 @@ class BookClientController {
     }
 
     def clearAll= {evt=null->
-        Book.executeUpdate("delete Book")    
+        bookService.clearAll()
         edt{
             model.books.clear()
         }

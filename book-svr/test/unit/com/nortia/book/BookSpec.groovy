@@ -1,4 +1,6 @@
-package book-domain
+package com.nortia.book
+
+import com.nortia.book.Book;
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification
