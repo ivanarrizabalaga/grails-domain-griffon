@@ -54,3 +54,8 @@ grails-domain-griffon.sublime-*
 #common
 book-common/build
 book-common/.gradle
+
+#General
+.gradle
+grails-domain-griffon.sublime-*
+
