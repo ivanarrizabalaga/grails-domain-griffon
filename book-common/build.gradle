@@ -19,35 +19,13 @@ repositories {
     // Use 'maven central' for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     mavenCentral()
-    mavenLocal()
-    maven {
-        url "http://snapshots.repository.codehaus.org"
-    }  
-    maven {
-        url "http://repository.codehaus.org"
-    }  
-    maven {
-        url "http://download.java.net/maven/2/"
-    }  
-    maven {
-        url "http://repository.jboss.com/maven2/"
-    }  
-    maven {
-        url "http://repo.spring.io/milestone"
-    }  
-    maven {
-        url "http://repo.spring.io/release"
-    }      
+    mavenLocal()    
 }
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // We use the latest groovy 2.x version for building this library
     compile 'org.codehaus.groovy:groovy:2.1.7'
-
-    compile "org.grails:grails-datastore-gorm-hibernate4:3.0.0.RELEASE"
-    compile "org.grails:grails-spring:2.3.7"
-    //compile "org.springframework:spring-expression:3.2.4.RELEASE"         
 
     // We use the awesome Spock testing and specification framework
     testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'

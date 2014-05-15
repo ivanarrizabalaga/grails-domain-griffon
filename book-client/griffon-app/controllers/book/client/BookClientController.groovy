@@ -1,6 +1,7 @@
 package book.client
 
 import com.nortia.book.Book
+import javax.swing.JOptionPane
 
 class BookClientController {
     // these will be injected by Griffon
@@ -13,27 +14,29 @@ class BookClientController {
     }       
 
     void loadData(){
-        //List books=Book.list()
         List books=bookService.list()
         edt{
+            model.books.clear()
             model.books.addAll(books)
         }
         
     }
 
     def addBook= {evt=null->
-        Book b=bookService.add(view.titleField.text,view.authorField.text)
+        boolean isAdded=bookService.add(view.titleField.text,view.authorField.text)
         edt{
-            model.books.add(b)
-            view.titleField.text=""
-            view.authorField.text=""
+            if(isAdded){
+                view.titleField.text=""
+                view.authorField.text=""
+                this.loadData()                    
+            }else{
+                JOptionPane.showMessageDialog(null, "Book cannot be added to the collection", "Error", JOptionPane.ERROR_MESSAGE);            
+            }
         }
     }
 
     def clearAll= {evt=null->
         bookService.clearAll()
-        edt{
-            model.books.clear()
-        }
+        this.loadData()
     }    
 }

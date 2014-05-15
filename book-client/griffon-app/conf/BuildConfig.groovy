@@ -179,7 +179,9 @@ griffon.project.dependency.resolution = {
         //GORM
 //        runtime "com.h2database:h2:1.3.164"
         compile "com.nortia.book:book-common:1.0"
-
+        compile "org.grails:grails-datastore-gorm-hibernate4:3.0.0.RELEASE"
+        compile "org.grails:grails-spring:2.3.7"
+        compile "org.springframework:spring-expression:3.2.4.RELEASE"         
 
         //DIRMI
         compile 'dirmi:dirmi:1.1.2'     

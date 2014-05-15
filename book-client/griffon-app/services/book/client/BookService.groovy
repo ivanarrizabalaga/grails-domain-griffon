@@ -30,11 +30,15 @@ class BookService {
 		return remoteBookAPI.list()
         //return Book.list()
 	}
-	Book add(String title, String author){
-        Book b=new Book(title:title,author:author)
-		remoteBookAPI.add(b)
+	boolean add(String title, String author){
+        try{
+            return remoteBookAPI.add([title:title,author:author])    
+        }catch(e){
+            log.error e.message
+            return false
+        }
+		
         //b.save()
-        return b
 	}
 	void clearAll(){
 		remoteBookAPI.clearAll()
