@@ -1,0 +1,4 @@
+task syncDomains(type: Copy,description:"Copies grails domains into client src") {
+    from 'book-svr/grails-app/domain'
+    into 'book-client/src/main'
+}
