@@ -6,8 +6,8 @@ An attempt to create sample project made of 3 parts talking via RMI: a grails se
 The concept is:
  
 
- book-svr (grails app) <------------> book-client(griffon app)
-   |                                                  |
-   |-----------book-remote(grails binary plugin)------|
-                     -Book.groovy (domain)
-                     -RemoteBookAPI (Remote)
+ book-svr (grails app) <------------> book-client(griffon app)   
+   |                                                  |   
+   |-----------book-remote(grails binary plugin)------|   
+                     -Book.groovy (domain)   
+                     -RemoteBookAPI (Remote)   
