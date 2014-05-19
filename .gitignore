@@ -52,5 +52,4 @@ book-client/target
 grails-domain-griffon.sublime-*
 
 #common
-book-common/build
-book-common/.gradle
+book-remote/target
