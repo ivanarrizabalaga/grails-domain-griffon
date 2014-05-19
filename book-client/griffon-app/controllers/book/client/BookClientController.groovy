@@ -13,27 +13,24 @@ class BookClientController {
     }       
 
     void loadData(){
-        //List books=Book.list()
         List books=bookService.list()
         edt{
+            view.titleField.text=""
+            view.authorField.text=""            
+            model.books.clear()
+            
             model.books.addAll(books)
         }
         
     }
 
     def addBook= {evt=null->
-        Book b=bookService.add(view.titleField.text,view.authorField.text)
-        edt{
-            model.books.add(b)
-            view.titleField.text=""
-            view.authorField.text=""
-        }
+        bookService.add(view.titleField.text,view.authorField.text)
+        this.loadData()
     }
 
     def clearAll= {evt=null->
-        bookService.clearAll()
-        edt{
-            model.books.clear()
-        }
+        bookService.clearAll()        
+        this.loadData()
     }    
 }

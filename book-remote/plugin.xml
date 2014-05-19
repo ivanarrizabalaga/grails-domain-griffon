@@ -1,0 +1,12 @@
+<plugin name='book-remote' version='0.1' grailsVersion='2.3 &gt; *'>
+  <author>Your name</author>
+  <title>Book Remote Plugin</title>
+  <description>Brief summary/description of the plugin.
+</description>
+  <documentation>http://grails.org/plugin/book-remote</documentation>
+  <type>BookRemoteGrailsPlugin</type>
+  <packaging>binary</packaging>
+  <resources>
+    <resource>com.nortia.book.Book</resource>
+  </resources>
+</plugin>

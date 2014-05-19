@@ -183,7 +183,9 @@ griffon.project.dependency.resolution = {
 
         //DIRMI
         compile 'dirmi:dirmi:1.1.2'     
-        compile 'org.cojen:cojen:2.2.2'        
+        compile 'org.cojen:cojen:2.2.2' 
+
+        compile 'com.nortia.book:book-remote:0.1'       
     }
 }
 
