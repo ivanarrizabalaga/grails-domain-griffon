@@ -52,9 +52,7 @@ grails.project.dependency.resolution = {
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
         compile 'dirmi:dirmi:1.1.2'
         compile 'org.cojen:cojen:2.2.2'
-		compile ("com.nortia.book:book-common:1.0-SNAPSHOT"){
-			exclude group:'org.grails'
-		}
+		compile ("com.nortia.book:book-common:1.0-SNAPSHOT")
     }
 
     plugins {
@@ -66,7 +64,8 @@ grails.project.dependency.resolution = {
         compile ':cache:1.1.1'
 
         // plugins needed at runtime but not for compilation
-        runtime ":hibernate:3.6.10.9" // or ":hibernate4:4.3.4"
+        //runtime ":hibernate:3.6.10.9" // or ":hibernate4:4.3.4"
+        runtime ":hibernate4:4.3.4"
         runtime ":database-migration:1.3.8"
         runtime ":jquery:1.11.0.2"
         runtime ":resources:1.2.7"

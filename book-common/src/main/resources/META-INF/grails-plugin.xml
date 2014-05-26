@@ -1,0 +1,11 @@
+<plugin name='book-common' version='1.0-SNAPSHOT' grailsVersion='2.3 &gt; *'>
+  <author>Ivan Arrizabalaga</author>
+  <title>Shared domains sample</title>
+  <description>An attempt to create a compatible grails plugin with a groovy project.</description>
+  <documentation>http://grails.org/plugin/book-common</documentation>
+  <type>com.nortia.book.grails.BookCommonGrailsPlugin</type>
+  <packaging>binary</packaging>
+  <resources>
+    <resource>com.nortia.book.Book</resource>
+  </resources>  
+</plugin>
