@@ -32,7 +32,7 @@ class BookService {
 	}
 	boolean add(String title, String author){
         try{
-            return remoteBookAPI.add([title:title,author:author])    
+            return remoteBookAPI.add(new Book(title:title,author:author))    
         }catch(e){
             log.error e.message
             return false

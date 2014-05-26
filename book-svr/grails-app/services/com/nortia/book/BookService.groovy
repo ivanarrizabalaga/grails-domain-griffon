@@ -14,7 +14,7 @@ class BookService implements RemoteBookAPI{
 	List list() throws RemoteException{
 		return Book.list()
 	}
-	boolean add(Map params) throws RemoteException{
+	boolean add(Book params) throws RemoteException{
 		Book book=new Book(title:params.title,author:params.author)
 		return book.save()
 	}
