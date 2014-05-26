@@ -52,7 +52,7 @@ grails.project.dependency.resolution = {
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
         compile 'dirmi:dirmi:1.1.2'
         compile 'org.cojen:cojen:2.2.2'
-		compile 'com.nortia.book:book-remote:0.1'
+		compile 'com.nortia.book:book-remote:1.0-SNAPSHOT'
     }
     plugins {
         // plugins for the build system only

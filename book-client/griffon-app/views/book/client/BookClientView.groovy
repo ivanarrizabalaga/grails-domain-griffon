@@ -7,8 +7,9 @@ import java.awt.Color
 import java.util.List 
 import ca.odell.glazedlists.gui.*
 import ca.odell.glazedlists.swing.*
+import com.nortia.book.SampleEnum
 
-application(title: 'BookClient',
+application(title: SampleEnum.TITLE,
   preferredSize: [640, 480],
   pack: true,
   locationByPlatform: true,

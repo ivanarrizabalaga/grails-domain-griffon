@@ -1,7 +1,7 @@
 class BookRemoteGrailsPlugin {
     // the plugin version
     String groupId = 'com.nortia.book'
-    def version = "0.1"    
+    def version = "1.0-SNAPSHOT"    
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.3 > *"
     // resources that are excluded from plugin packaging
